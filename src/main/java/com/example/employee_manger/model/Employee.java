@@ -1,7 +1,10 @@
-package model;
+package com.example.employee_manger.model;
+
+
 
 import jakarta.persistence.*;
 import jakarta.validation.constraints.*;
+
 import lombok.Getter;
 import lombok.Setter;
 import lombok.NoArgsConstructor;
@@ -12,11 +15,18 @@ import lombok.NoArgsConstructor;
 @Setter 
 @NoArgsConstructor 
 
+
 public class Employee {
     
     @Id 
     @GeneratedValue (strategy = GenerationType.IDENTITY)
     private Long id;
+
+    // Explicit setter keeps the ID update available even if the IDE has not
+    // enabled Lombok annotation processing.
+    public void setId(Long id) {
+        this.id = id;
+    }
 
     @NotBlank (message = "Full name is required")
     private String fullName;
