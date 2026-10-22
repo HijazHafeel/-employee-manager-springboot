@@ -1,7 +1,10 @@
-package model;
+package com.example.employee_manger.model;
+
+
 
 import jakarta.persistence.*;
 import jakarta.validation.constraints.*;
+
 import lombok.Getter;
 import lombok.Setter;
 import lombok.NoArgsConstructor;
@@ -11,6 +14,7 @@ import lombok.NoArgsConstructor;
 @Getter 
 @Setter 
 @NoArgsConstructor 
+
 
 public class Employee {
     
